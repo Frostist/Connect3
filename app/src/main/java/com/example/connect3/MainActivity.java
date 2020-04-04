@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
+
         counter.animate().translationYBy(1500).rotation(360).setDuration(300);
         Log.w(TAG, "Clicked");
     }
