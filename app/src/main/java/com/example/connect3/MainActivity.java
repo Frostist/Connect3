@@ -13,6 +13,7 @@ import android.widget.TextView;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
+    //Connect 3 game coded by William Frost
 
     //If you wish to use the logs, switch it over to 'warn' and search for "Project".
     //Setting up TAG to be searchable in th logs
