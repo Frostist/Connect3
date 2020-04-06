@@ -10,6 +10,8 @@ import androidx.gridlayout.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity {
 
     //If you wish to use the logs, switch it over to 'warn' and search for "Project".
@@ -84,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                     gameActive = false;
 
                     //Setting a string so that it can be replaced by the winners name and can be printed ina  toast
-                    String winner = "";
+                    String winner;
 
                     //Setting up a statement to determine who has won.
                     //if the active player by the end of the game is 1 or 0 then print
@@ -99,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                     buttonStart = findViewById(R.id.buttonStart);
                     textViewWon = findViewById(R.id.textViewWon);
                     //printing text to textbox
-                    textViewWon.setText(winner + " Has Won");
+                    textViewWon.setText(String.format("%s Has Won", winner));
                     //Setting them to visable
                     buttonStart.setVisibility(View.VISIBLE);
                     textViewWon.setVisibility(View.VISIBLE);
@@ -133,9 +135,7 @@ public class MainActivity extends AppCompatActivity {
 
         //This code is a repeat of the code at the start of the project and is here to reset the hard to all the default
         //this for loop is to set each value of gameState to its original value
-        for (int i=0; i<gameState.length; i++) {
-            gameState[i] = 2;
-        }
+        Arrays.fill(gameState, 2);
 
         //This defineds which player goes first
         activePlayer = 0;
