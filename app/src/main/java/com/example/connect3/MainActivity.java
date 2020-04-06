@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     //0: is yellow, 1: is red, 2: is empty
     int[] gameState = {2, 2, 2, 2, 2, 2, 2, 2, 2};
     //These are the states that are checked to find out which counters have won
-    int[] [] winningPositions = {{0, 1, 2}, {3, 4, 5}, {6, 7, 7}, {0, 3, 6}, {1, 4,  7}, {2, 5, 8}, {0, 4, 8}, {2, 4, 6}};
+    int[] [] winningPositions = {{0, 1, 2}, {3, 4, 5}, {6, 7, 8}, {0, 3, 6}, {1, 4,  7}, {2, 5, 8}, {0, 4, 8}, {2, 4, 6}};
     //This definds which player goes first
     int activePlayer = 0;
     //Setting a value to know when the game finished
