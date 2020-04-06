@@ -6,10 +6,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.GridLayout;
+import androidx.gridlayout.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     String TAG = "Project";
     TextView textViewWon;
     Button buttonStart;
-    GridLayout gridLayout;
 
     //0: is yellow, 1: is red, 2: is empty
     int[] gameState = {2, 2, 2, 2, 2, 2, 2, 2, 2};
@@ -120,8 +118,8 @@ public class MainActivity extends AppCompatActivity {
         buttonStart.setVisibility(View.INVISIBLE);
         textViewWon.setVisibility(View.INVISIBLE);
         //finding the grid layout
-        gridLayout = findViewById(R.id.gridLayout);
-
+        GridLayout gridLayout = findViewById(R.id.gridLayout);
+        Log.w(TAG, "Button pressed");
 
         //This is to loop through all the items in the grid
         //and therefore is used to update them
